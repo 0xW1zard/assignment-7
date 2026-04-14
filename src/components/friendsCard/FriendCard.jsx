@@ -17,8 +17,8 @@ const FriendCard = ({ data }) => {
 
 
     return (
-        <div className='flex flex-col items-center gap-3 bg-white p-5 rounded-xl shadow-md text-center space-y-1.5 my-8'>
-            <img className='rounded-full' src={picture} alt={name} />
+        <div className='flex flex-col items-center gap-3 bg-white p-5 rounded-xl shadow-md text-center space-y-1.5 '>
+            <img className='rounded-full mt-2' src={picture} alt={name} />
             <h1 className='text-2xl font-semibold'>{name}</h1>
             <p className='text-[#64748b] text-[14px]'>{days_since_contact}d Ago</p>
             <div className='flex gap-2 flex-wrap justify-center'>
