@@ -22,7 +22,6 @@ export const router = createBrowserRouter([
                 path: '/stats',
                 element: <Stats/>
             }
-        ],
-        errorElement: <div>404 Not Founddddddddddddddddddddddddddddddddddddd</div>
+        ]
     }
 ]);
