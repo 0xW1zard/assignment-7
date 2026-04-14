@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const FriendCard = ({ data }) => {
 
-    const { name, picture, tags, status, days_since_contact } = data;
+    const {id, name, picture, tags, status, days_since_contact } = data;
 
 
     const stat = (currentStatus) => {
@@ -17,7 +18,7 @@ const FriendCard = ({ data }) => {
 
 
     return (
-        <div className='flex flex-col items-center gap-3 bg-white p-5 rounded-xl shadow-md text-center space-y-1.5 '>
+        <Link to={`/friend/${id}`} className='flex flex-col items-center gap-3 bg-white p-5 rounded-xl shadow-md text-center space-y-1.5 '>
             <img className='rounded-full mt-2' src={picture} alt={name} />
             <h1 className='text-2xl font-semibold'>{name}</h1>
             <p className='text-[#64748b] text-[14px]'>{days_since_contact}d Ago</p>
@@ -27,7 +28,7 @@ const FriendCard = ({ data }) => {
                 }
             </div>
             <div className={stat(status)}>{status}</div>
-        </div>
+        </Link>
     );
 };
 

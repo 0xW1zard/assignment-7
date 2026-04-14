@@ -1,7 +1,9 @@
 import React from 'react';
 import CountCard from '../heroCountCard/CountCard';
 
-const Hero = () => {
+const Hero = ({datas}) => {
+
+
     return (
         <div className='container mx-auto py-10'>
             <div className="hero my-3 ">
@@ -19,10 +21,10 @@ const Hero = () => {
                 </div>
             </div>
             <div className='flex flex-wrap  gap-2.5'>
-                <CountCard count={10} label="Total" />
-                <CountCard count={2} label="Total" />
-                <CountCard count={10} label="Total" />
-                <CountCard count={10} label="Total" />
+                <CountCard count={datas.length} label="Total Friends" />
+                <CountCard count={datas.filter((data) => data.status === "ontrack").length} label="On Track" />
+                <CountCard count={datas.filter((data) => data.status === "overdue").length} label="Need Attention" />
+                <CountCard count={23} label="Interactions This Month" />
             </div>
             <div className="divider my-8"></div>
         </div>

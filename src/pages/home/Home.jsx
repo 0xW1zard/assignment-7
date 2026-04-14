@@ -13,10 +13,10 @@ const Home = () => {
     return (
         <>
             <div className='bg-[#f8fafc] px-4 pb-6'>
-                <Hero></Hero>
+                <Hero datas={datas}></Hero>
                 <div className='container mx-auto'>
                     <h1 className='text-[#1f2937] font-bold text-2xl'>Your Friends</h1>
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-3'>
                         {
                             datas.map((data) => <FriendCard key={data.id} data={data}></FriendCard>)
                         }

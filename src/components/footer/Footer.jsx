@@ -5,8 +5,6 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { Link } from 'react-router';
 
 
-
-
 const Footer = () => {
     return (
         <div className='bg-[#244d3f] py-20'>
@@ -14,7 +12,7 @@ const Footer = () => {
                 <h1 className='text-7xl  font-bold'>KeenKeeper</h1>
                 <p className='text-base-300'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
                 <div>
-                    <h2 className='text-xl font-semibold'>Social Links</h2>
+                    <h2 className='text-xl font-medium'>Social Links</h2>
                     <div className=' flex w-fit gap-2 mx-auto mt-4'>
                         <Link to="https://facebook.com" target='_blank' className="p-2.5 bg-white rounded-full text-black"><TiSocialFacebook /></Link>
                         <Link to="https://twitter.com" target='_blank' className="p-2.5 bg-white rounded-full text-black"><RiTwitterXLine /></Link>
