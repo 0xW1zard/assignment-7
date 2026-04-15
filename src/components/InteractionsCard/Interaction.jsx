@@ -5,15 +5,13 @@ import { IoCall } from "react-icons/io5";
 import { TbArrowsRandom } from "react-icons/tb";
 
 
-
-
 const Interaction = ({ data }) => {
     const { type, friendName, date } = data;
 
     const getIcon = () => {
-        if (type === 'Text') return <BsFillChatLeftTextFill />;
-        if (type === 'Video') return <FaVideo />;
-        if (type === 'Call') return <IoCall />;
+        if (type === 'text') return <BsFillChatLeftTextFill />;
+        if (type === 'video') return <FaVideo />;
+        if (type === 'call') return <IoCall />;
         return <TbArrowsRandom />; 
     };
 

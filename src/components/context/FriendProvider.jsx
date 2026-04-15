@@ -13,9 +13,10 @@ const FriendProvider = ({ children }) => {
         return new Date().toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
     };
 
-    const handleInteractions = (type, friendName) => {
+    const handleInteractions = (type, friendName, id) => {
         const newInteractionData = {
-            id: crypto.randomUUID(),
+            id: id,
+            keyId: crypto.randomUUID(),
             type: type,
             friendName: friendName,
             date: getFormattedDate()
@@ -25,17 +26,17 @@ const FriendProvider = ({ children }) => {
 
     const handleCall = (friend) => {
         setcall([...call, friend]);
-        handleInteractions('Call', friend.name);
+        handleInteractions('call', friend.name, friend.id);
     };
 
     const handleText = (friend) => {
         setText([...text, friend]);
-        handleInteractions('Text', friend.name);
+        handleInteractions('text', friend.name, friend.id);
     };
 
     const handleVideoCall = (friend) => {
         setVideoCall([...videoCall, friend]);
-        handleInteractions('Video', friend.name);
+        handleInteractions('video', friend.name, friend.id);
     };
 
     const data = { text, call, videoCall,intaList, setText, setcall, setVideoCall, handleCall, handleText, handleVideoCall }

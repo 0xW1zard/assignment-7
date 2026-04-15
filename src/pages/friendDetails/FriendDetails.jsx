@@ -80,7 +80,6 @@ const FriendDetails = () => {
                             <p className='text-[#64748b] text-sm'>Connect every <strong className='text-gray-800'>{goal} days</strong></p>
                         </div>
 
-                        {/* Quick Check-In */}
                         <div className='bg-white p-5 rounded-xl shadow-sm '>
                             <h3 className='font-semibold text-[#244d3f] mb-4'>Quick Check-In</h3>
                             <div className='grid grid-cols-3 gap-4'>
@@ -109,7 +108,7 @@ const FriendDetails = () => {
                             </div>
                             <div>
                                 { intaList.map((item) => (
-                                    <Interaction key={item.id} data={item} />
+                                    <Interaction key={item.keyId} data={item} />
                                 )) }
                             </div>
                         </div>
