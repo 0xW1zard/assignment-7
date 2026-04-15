@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { RiNotificationSnoozeLine } from 'react-icons/ri';
 import { PiArchiveBold } from "react-icons/pi";
 import { MdDeleteForever, MdHistory, MdOutlineCall, MdOutlineMessage } from "react-icons/md";
-import { useLoaderData, useParams } from 'react-router';
+import { Link, useLoaderData, useParams } from 'react-router';
 import { BiVideo } from 'react-icons/bi';
 import Footer from '../../components/footer/Footer';
+import { FriendContext } from '../../components/context/FriendProvider';
+import Interaction from '../../components/InteractionsCard/Interaction';
 
 const FriendDetails = () => {
+
+    const { text, call, videoCall, setText, setcall, setVideoCall, handleCall, handleText, handleVideoCall, intaList } = useContext(FriendContext)
+
+    // console.log("call", call)
+    // console.log('text', text)
+    // console.log("videocall", videoCall)
     const params = useParams();
     const friend = useLoaderData().find(f => f.id === parseInt(params.id));
 
-    const { id, name, picture, email, days_since_contact, status, tags, bio, goal, next_due_date } = friend;
+    const { name, picture, email, days_since_contact, status, tags, bio, goal, next_due_date } = friend;
 
     const stat = (currentStatus) => {
         const base = "w-fit py-2 px-3.5 rounded-full text-sm font-bold capitalize ";
@@ -76,15 +84,15 @@ const FriendDetails = () => {
                         <div className='bg-white p-5 rounded-xl shadow-sm '>
                             <h3 className='font-semibold text-[#244d3f] mb-4'>Quick Check-In</h3>
                             <div className='grid grid-cols-3 gap-4'>
-                                <button className='py-4 border border-gray-200 rounded-lg flex flex-col items-center justify-center gap-2 bg-gray-50 hover:bg-gray-100 text-gray-700 transition'>
+                                <button onClick={() => handleCall(friend)} className='py-4 border border-gray-200 rounded-lg flex flex-col items-center justify-center gap-2 bg-gray-50 hover:bg-gray-200 hover:shadow-lg text-gray-700 transition'>
                                     <MdOutlineCall size={24} />
                                     <span className='text-sm font-medium'>Call</span>
                                 </button>
-                                <button className='py-4 border border-gray-200 rounded-lg flex flex-col items-center justify-center gap-2 bg-gray-50 hover:bg-gray-100 text-gray-700 transition'>
+                                <button onClick={() => handleText(friend)} className='py-4 border border-gray-200 rounded-lg flex flex-col items-center justify-center gap-2 bg-gray-50 hover:bg-gray-200 hover:shadow-lg text-gray-700 transition'>
                                     <MdOutlineMessage size={24} />
                                     <span className='text-sm font-medium'>Text</span>
                                 </button>
-                                <button className='py-4 border border-gray-200 rounded-lg flex flex-col items-center justify-center gap-2 bg-gray-50 hover:bg-gray-100 text-gray-700 transition'>
+                                <button onClick={() => handleVideoCall(friend)} className='py-4 border border-gray-200 rounded-lg flex flex-col items-center justify-center gap-2 bg-gray-50 hover:bg-gray-200 hover:shadow-lg text-gray-700 transition'>
                                     <BiVideo size={24} />
                                     <span className='text-sm font-medium'>Video</span>
                                 </button>
@@ -99,21 +107,10 @@ const FriendDetails = () => {
                                     <MdHistory size={16} /> Full History
                                 </button>
                             </div>
-                            <div className='border border-gray-200 rounded-lg divide-y divide-gray-200'>
-
-                                <div className='p-4 flex items-center justify-between hover:bg-gray-50'>
-                                    <div className='flex items-center gap-4'>
-                                        <div className='p-2 bg-gray-100 rounded-lg text-gray-600'>
-                                            asss
-                                        </div>
-                                        <div>
-                                            <h4 className='font-medium text-gray-800 text-sm'>adsdf</h4>
-                                            <p className='text-[#64748b] text-xs mt-0.5'>ssss</p>
-                                        </div>
-                                    </div>
-                                    <div className='text-[#64748b] text-xs font-medium'>ddddd</div>
-                                </div>
-
+                            <div>
+                                { intaList.map((item) => (
+                                    <Interaction key={item.id} data={item} />
+                                )) }
                             </div>
                         </div>
                     </div>
