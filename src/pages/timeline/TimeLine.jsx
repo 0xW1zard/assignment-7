@@ -13,7 +13,7 @@ const TimeLine = () => {
 
     return (
         <div className='bg-[#f8fafc] flex flex-col min-h-screen'>
-            <div className='container mx-auto py-16 grow'>
+            <div className='container mx-auto py-16 grow px-3 md:px-0'>
                 <div>
                     <h1 className='text-5xl font-semibold'>TimeLine</h1>
 

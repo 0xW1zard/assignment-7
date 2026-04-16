@@ -4,7 +4,7 @@ import './index.css'
 import { RouterProvider } from 'react-router/dom'
 import { router } from './router/Router'
 import FriendProvider from './components/context/FriendProvider'
-import { ToastContainer } from 'react-toastify'
+import { Flip, ToastContainer } from 'react-toastify'
 
 
 createRoot(document.getElementById('root')).render(
@@ -12,6 +12,11 @@ createRoot(document.getElementById('root')).render(
     <FriendProvider>
     <RouterProvider router={router} />
     </FriendProvider>
-    <ToastContainer></ToastContainer>
+    <ToastContainer
+    position="bottom-right"
+    autoClose={1000}
+    theme="light"
+    transition={Flip}
+    ></ToastContainer>
   </StrictMode>,
 )

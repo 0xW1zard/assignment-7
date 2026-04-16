@@ -12,9 +12,7 @@ const FriendDetails = () => {
 
     const { text, call, videoCall, setText, setcall, setVideoCall, handleCall, handleText, handleVideoCall, intaList } = useContext(FriendContext)
 
-    // console.log("call", call)
-    // console.log('text', text)
-    // console.log("videocall", videoCall)
+
     const params = useParams();
     const friend = useLoaderData().find(f => f.id === parseInt(params.id));
 
@@ -30,6 +28,7 @@ const FriendDetails = () => {
         return base;
     };
 
+    const FrinedInta = intaList.filter(item => item.id === friend.id);
 
     return (
         <div>
@@ -102,12 +101,12 @@ const FriendDetails = () => {
                         <div className='bg-white p-5 rounded-xl shadow-sm'>
                             <div className='flex justify-between items-center mb-4'>
                                 <h3 className='font-semibold text-[#244d3f]'>Recent Interactions</h3>
-                                <button className='px-3 py-1.5 border border-gray-200 rounded-md flex items-center gap-1.5 text-sm bg-gray-50 font-medium hover:bg-gray-100'>
+                                <Link to={'/timeline'} className='px-3 py-1.5 border border-gray-200 rounded-md flex items-center gap-1.5 text-sm bg-gray-50 font-medium hover:bg-gray-100'>
                                     <MdHistory size={16} /> Full History
-                                </button>
+                                </Link>
                             </div>
                             <div>
-                                { intaList.map((item) => (
+                                { FrinedInta.map((item) => (
                                     <Interaction key={item.keyId} data={item} />
                                 )) }
                             </div>

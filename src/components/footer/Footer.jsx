@@ -8,8 +8,8 @@ import { Link } from 'react-router';
 const Footer = () => {
     return (
         <div className='bg-[#244d3f] py-20'>
-            <div className=' text-white text-center space-y-5 container mx-auto'>
-                <h1 className='text-7xl  font-bold'>KeenKeeper</h1>
+            <div className=' text-white text-center space-y-5 container mx-auto px-3 md:px-0'>
+                <h1 className='text-6xl md:text-7xl font-bold'>KeenKeeper</h1>
                 <p className='text-base-300'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
                 <div>
                     <h2 className='text-xl font-medium'>Social Links</h2>
