@@ -5,6 +5,7 @@ import TimeLine from '../pages/timeline/TimeLine';
 import Home from '../pages/home/Home';
 import Stats from '../pages/stats/Stats';
 import FriendDetails from '../pages/friendDetails/FriendDetails';
+import Error from '../pages/error/Error';
 
 export const router = createBrowserRouter([
     {
@@ -28,6 +29,7 @@ export const router = createBrowserRouter([
                 element: <FriendDetails></FriendDetails>,
                 loader: () => fetch('/datas.json')
             }
-        ]
+        ],
+        errorElement: <Error></Error>
     }
 ]);

@@ -18,7 +18,7 @@ const FriendCard = ({ data }) => {
 
 
     return (
-        <Link to={`/friend/${id}`} className='flex flex-col items-center gap-3 bg-white p-5 rounded-xl shadow-md text-center space-y-1.5 '>
+        <Link to={`/friend/${id}`} className='flex flex-col items-center gap-3 bg-white p-5 rounded-xl shadow-md text-center space-y-1.5 hover:shadow-xl transition-shadow duration-200'>
             <img className='rounded-full mt-2' src={picture} alt={name} />
             <h1 className='text-2xl font-semibold'>{name}</h1>
             <p className='text-[#64748b] text-[14px]'>{days_since_contact}d Ago</p>
