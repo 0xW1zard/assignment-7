@@ -6,6 +6,7 @@ import { FriendContext } from '../../components/context/FriendProvider';
 const Stats = () => {
 
     const { intaList } = useContext(FriendContext);
+    console.log(intaList);
 
     let TextValue = 0;
     let CallValue = 0;
@@ -34,17 +35,17 @@ const Stats = () => {
             <div className='container mx-auto py-16 px-3 md:px-0 '>
                 <h1 className='text-3xl font-bold mb-10'>Friendship Analytics</h1>
                 <div className='bg-white p-5 rounded-xl shadow-md mb-6'>
-                    <h2 className='text-xl text-[#244d3f] mt-2'>By Interaction Type</h2>
-                    <div className='w-fit mx-auto my-10'>
+                    <h2 className='text-xl text-[#244d3f] mt-2 ml-3'>By Interaction Type</h2>
+                    <div className='w-full mx-auto my-10'>
                         {
                             intaList.length === 0 ?
                                 <div className="flex flex-col items-center justify-center py-16 bg-white border-2 border-dashed border-gray-200 rounded-2xl">
-                                    <div className="text-5xl mb-4 opacity-20">🧮</div>
+                                    <div className="text-5xl mb-4 opacity-30">🧮</div>
                                     <h3 className="text-xl font-bold text-gray-700 px-6">Add Interactions to see Analytics</h3>
                                 </div>
                                 :
-                                <div>
-                                    <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '70vh', aspectRatio: 1 }} responsive>
+                                <div className='mx-auto w-fit'>
+                                    <PieChart style={{ width: '100%', maxWidth: '300px', maxHeight: '70vh', aspectRatio: 1 }} responsive>
                                         <Pie data={data} innerRadius="80%"
                                             outerRadius="100%"
                                             cornerRadius="50%"
@@ -55,7 +56,7 @@ const Stats = () => {
                                     </PieChart>
                                 </div>
                         }
-                        <div className='flex gap-4  justify-around mt-12'>
+                        <div className='flex gap-x-10 md:gap-x-20 justify-center mt-12'>
                             <div className='flex items-center justify-center'>
                                 <div className='w-4 h-4 bg-blue-600 rounded-full mr-2'></div>
                                 <p>Text</p>

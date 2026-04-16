@@ -1,11 +1,12 @@
 import React from 'react';
 import Nav from '../components/Navbar/Nav';
-import { Outlet } from 'react-router';
+import { Outlet, ScrollRestoration } from 'react-router';
 
 const MainLayout = () => {
     return (
         <div>
             <Nav />
+            <ScrollRestoration></ScrollRestoration>
             <Outlet></Outlet>
         </div>
     );

@@ -35,7 +35,7 @@ const Error = () => {
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
             to="/"
-            className="rounded-md bg-green-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 transition-colors duration-200"
+            className="rounded-md bg-green-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 duration-200"
           >
             Go back home
           </Link>

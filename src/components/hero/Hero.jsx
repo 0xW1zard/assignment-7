@@ -7,7 +7,7 @@ const Hero = ({datas}) => {
     const {intaList} = useContext(FriendContext);
 
     return (
-        <div className='container mx-auto py-10'>
+        <div className='container mx-auto pt-10'>
             <div className="hero my-3 ">
                 <div className="hero-content text-center">
                     <div className="max-w-md">
@@ -28,7 +28,7 @@ const Hero = ({datas}) => {
                 <CountCard count={datas.filter((data) => data.status === "overdue").length} label="Need Attention" />
                 <CountCard count={intaList.length} label="Interactions This Month" />
             </div>
-            <div className="divider my-8"></div>
+            <div className="divider my-10"></div>
         </div>
 
     );
