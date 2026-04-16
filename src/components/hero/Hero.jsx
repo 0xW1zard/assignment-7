@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import CountCard from '../heroCountCard/CountCard';
+import { FriendContext } from '../context/FriendProvider';
 
 const Hero = ({datas}) => {
 
+    const {intaList} = useContext(FriendContext);
 
     return (
         <div className='container mx-auto py-10'>
@@ -24,7 +26,7 @@ const Hero = ({datas}) => {
                 <CountCard count={datas.length} label="Total Friends" />
                 <CountCard count={datas.filter((data) => data.status === "ontrack").length} label="On Track" />
                 <CountCard count={datas.filter((data) => data.status === "overdue").length} label="Need Attention" />
-                <CountCard count={23} label="Interactions This Month" />
+                <CountCard count={intaList.length} label="Interactions This Month" />
             </div>
             <div className="divider my-8"></div>
         </div>

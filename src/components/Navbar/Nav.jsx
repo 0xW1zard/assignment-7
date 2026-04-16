@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Nav = () => {
 
@@ -25,7 +25,7 @@ const Nav = () => {
             <div className='navbar container mx-auto'>
                 <div className="navbar-start">
 
-                    <a className="text-2xl text-[#244D3F] font-semibold"><span className='text-[#1F2937] font-extrabold'>Keen</span>Keeper</a>
+                    <Link to={'/'} className="text-2xl text-[#244D3F] font-semibold"><span className='text-[#1F2937] font-extrabold'>Keen</span>Keeper</Link>
                 </div>
                 <div className="navbar-end">
                     <div className='hidden md:flex'>

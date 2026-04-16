@@ -10,7 +10,7 @@ import Interaction from '../../components/InteractionsCard/Interaction';
 
 const FriendDetails = () => {
 
-    const { text, call, videoCall, setText, setcall, setVideoCall, handleCall, handleText, handleVideoCall, intaList } = useContext(FriendContext)
+    const { handleCall, handleText, handleVideoCall, intaList } = useContext(FriendContext)
 
 
     const params = useParams();
@@ -28,7 +28,7 @@ const FriendDetails = () => {
         return base;
     };
 
-    const FrinedInta = intaList.filter(item => item.id === friend.id);
+    const FriendInta = intaList.filter(item => item.id === friend.id);
 
     return (
         <div>
@@ -106,7 +106,7 @@ const FriendDetails = () => {
                                 </Link>
                             </div>
                             <div>
-                                { FrinedInta.map((item) => (
+                                { FriendInta.map((item) => (
                                     <Interaction key={item.keyId} data={item} />
                                 )) }
                             </div>
