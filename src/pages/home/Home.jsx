@@ -1,4 +1,4 @@
-import React, { Suspense, use, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import Hero from '../../components/hero/Hero';
 import FriendCard from '../../components/friendsCard/FriendCard';
 import Footer from '../../components/footer/Footer';

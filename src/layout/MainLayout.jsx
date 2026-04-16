@@ -6,7 +6,7 @@ const MainLayout = () => {
     return (
         <div>
             <Nav />
-            <ScrollRestoration></ScrollRestoration>
+            <ScrollRestoration />
             <Outlet></Outlet>
         </div>
     );

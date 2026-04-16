@@ -7,7 +7,7 @@ const Hero = ({datas}) => {
     const {intaList} = useContext(FriendContext);
 
     return (
-        <div className='container mx-auto pt-10'>
+        <div className='container mx-auto pt-10 pb-5'>
             <div className="hero my-3 ">
                 <div className="hero-content text-center">
                     <div className="max-w-md">
@@ -22,7 +22,7 @@ const Hero = ({datas}) => {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-wrap  gap-2.5'>
+            <div className='flex flex-wrap gap-4 justify-center mt-5'>
                 <CountCard count={datas.length} label="Total Friends" />
                 <CountCard count={datas.filter((data) => data.status === "ontrack").length} label="On Track" />
                 <CountCard count={datas.filter((data) => data.status === "overdue").length} label="Need Attention" />

@@ -48,9 +48,9 @@ const FriendDetails = () => {
                             <p className='text-[#64748b] text-sm'>Preferred: {email}</p>
                         </div>
                         <div className='mt-4 space-y-2 text-center'>
-                            <div className="p-3 bg-white border border-base-300 rounded-lg flex justify-center items-center gap-2 "><RiNotificationSnoozeLine />Snooze 2 Weeks</div>
-                            <div className="p-3 bg-white border border-base-300 rounded-lg flex justify-center items-center gap-2 "><PiArchiveBold />Archive</div>
-                            <div className="p-3 bg-white border border-base-300 rounded-lg text-red-500 flex justify-center items-center gap-2 "><MdDeleteForever />Delete</div>
+                            <div className="p-3 bg-white rounded-lg flex justify-center items-center gap-2 shadow-sm "><RiNotificationSnoozeLine />Snooze 2 Weeks</div>
+                            <div className="p-3 bg-white rounded-lg flex justify-center items-center gap-2 shadow-sm "><PiArchiveBold />Archive</div>
+                            <div className="p-3 bg-white rounded-lg text-red-500 flex justify-center items-center gap-2 shadow-sm "><MdDeleteForever />Delete</div>
                         </div>
                     </div>
 
