@@ -19,9 +19,9 @@ const Footer = () => {
                         <Link to="https://instagram.com" target='_blank' className="p-2.5 bg-white rounded-full text-black"><SlSocialInstagram /></Link>
                     </div>
                 </div>
-                <div className='flex justify-between items-center mt-7 border-t border-[#fafafa7e] pt-4 px-4'>
-                    <p className='text-sm text-[#fafafa7e]'>© 2026 KeenKeeper. All rights reserved.</p>
-                    <div>
+                <div className='flex justify-between items-center mt-10 border-t border-[#fafafa7e] pt-4 px-4'>
+                    <p className='text-sm text-[#fafafa7e] mt-5'>© 2026 KeenKeeper. All rights reserved.</p>
+                    <div className='mt-5'>
                         <Link to="/#" className='text-sm text-[#fafafa7e] mx-2'>Terms of Service</Link>
                         <Link to="/#" className='text-sm text-[#fafafa7e] mx-2'>Cookie</Link>
                         <Link to="/#" className='text-sm text-[#fafafa7e] mx-2'>Privacy Policy</Link>

@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')).render(
     </FriendProvider>
     <ToastContainer
     position="bottom-right"
-    autoClose={1000}
+    autoClose={800}
     theme="light"
     transition={Flip}
     ></ToastContainer>

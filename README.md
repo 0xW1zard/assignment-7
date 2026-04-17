@@ -1,16 +1,18 @@
-# React + Vite
+# KeenKeeper — Keep Your Friendships Alive 🤝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [https://keenkeeper-himel.netlify.app/](https://keenkeeper-himel.netlify.app/)
 
-Currently, two official plugins are available:
+## 📖 About The Project
+KeenKeeper is a personal relationship management dashboard designed to help you nurture the connections that matter most. It allows users to track their friends, monitor how long it has been since their last interaction, and easily log new calls, texts, and video chats. By visualizing contact goals and interaction history, KeenKeeper ensures no meaningful friendship slips through the cracks.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Key Features
+1. **Interactive Friend Dashboard:** View all your contacts at a glance, complete with status tags (Overdue, On-track, Almost Due) to prioritize who to reach out to next.
+2. **Dynamic Timeline & Check-ins:** Quickly log new interactions (Call, Text, Video) from a friend's profile. These are automatically recorded in a global Timeline page with advanced filtering options.
+3. **Friendship Analytics:** A dedicated Stats page featuring a visual breakdown (via Recharts) of your communication habits, showing the ratio of your text, call, and video interactions.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+* **Frontend:** React.js
+* **Routing:** React Router DOM
+* **Styling:** Tailwind CSS
+* **Data Visualization:** Recharts
+* **Deployment:** Netlify
